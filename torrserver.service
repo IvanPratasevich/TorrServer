@@ -5,7 +5,7 @@ After = syslog.target network.target nss-lookup.target
 [Service]
 Type = simple
 Environment="GODEBUG=madvdontneed=1"
-ExecStart = /path/to/torrserver -d /path/to/db/ -p 80
+ExecStart = /path/to/torrserver -d /path/to/db/ -p $PORT
 ExecReload = /bin/kill -HUP ${MAINPID}
 ExecStop = /bin/kill -INT ${MAINPID}
 TimeoutSec = 30
