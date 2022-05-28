@@ -1,0 +1,14 @@
+{
+  "name": "TorrServer deployment",
+  "description": "Deploy TorrServer to Heroku.",
+  "keywords": ["TorrServer"],
+  "env": {
+    "GODEBUG": {
+      "description": "Helper param",
+      "value": "madvdontneed=1"
+    }
+  },
+  "website": "",
+  "repository": "",
+  "stack": "container"
+ }
