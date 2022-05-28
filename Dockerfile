@@ -1,5 +1,5 @@
 ### FRONT BUILD START ###
-FROM --platform=$BUILDPLATFORM node:16-alpine as front
+FROM --platform=linux/amd64 node:16-alpine as front
 COPY ./web /app
 WORKDIR /app
 # Build front once upon multiarch build
