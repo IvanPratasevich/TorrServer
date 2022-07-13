@@ -48,7 +48,7 @@ FROM alpine
 ENV TS_CONF_PATH="/opt/ts/config"
 ENV TS_LOG_PATH="/opt/ts/log"
 ENV TS_TORR_DIR="/opt/ts/torrents"
-ENV TS_PORT= 8080
+ENV TS_PORT=process.env.PORT || 8080
 ENV GODEBUG=madvdontneed=1
 
 COPY --from=compressed ./torrserver /usr/bin/torrserver
